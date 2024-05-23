@@ -88,13 +88,13 @@ export default function RegisterView () {
 
           <input
             type="password"
-            placeholder="Password de Registro"
+            placeholder="Contraseña de Registro"
             className="w-full p-3  border-gray-300 border"
             {...register('password', {
-              required: 'El Password es obligatorio',
+              required: 'La contraseña es obligatoria',
               minLength: {
                 value: 8,
-                message: 'El Password debe ser mínimo de 8 caracteres'
+                message: 'La contraseña debe tener mínimo de 8 caracteres'
               }
             })}
           />
@@ -111,11 +111,11 @@ export default function RegisterView () {
           <input
             id="password_confirmation"
             type="password"
-            placeholder="Repite Password de Registro"
+            placeholder="Repite tu contraseña de Registro"
             className="w-full p-3  border-gray-300 border"
             {...register('password_confirmation', {
-              required: 'Repetir Password es obligatorio',
-              validate: value => value === password || 'Los Passwords no son iguales'
+              required: 'Repetir la contraseña es obligatorio',
+              validate: value => value === password || 'Las contraseñas no son iguales'
             })}
           />
 

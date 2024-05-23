@@ -66,10 +66,10 @@ export default function LoginView () {
 
           <input
             type="password"
-            placeholder="Password de Registro"
+            placeholder="Contraseña de Registro"
             className="w-full p-3  border-gray-300 border"
             {...register('password', {
-              required: 'El Password es obligatorio'
+              required: 'La contraseña es obligatoria'
             })}
           />
           {errors.password && (
