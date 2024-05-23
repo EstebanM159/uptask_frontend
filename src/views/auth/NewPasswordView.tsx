@@ -7,7 +7,6 @@ import { useParams } from 'react-router-dom'
 export default function NewPasswordView () {
   const params = useParams()
   const tokenId = params.tokenId!
-  console.log(tokenId)
   const [token, setToken] = useState<ConfirmToken['token']>('')
   const [isValidToken, setIsValidToken] = useState(false)
   return (
