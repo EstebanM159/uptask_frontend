@@ -9,7 +9,10 @@ import Spinner from '@/components/Spinner'
 export default function AppLayout () {
   const { data, isError, isLoading } = useAuth()
 
-  if (isLoading) return <Spinner/>
+  if (isLoading) return (<>
+  <Spinner/>
+  <p className="text-black">Esta API está alojada en un servicio gratuito, por lo que las respuestas pueden tardar un poco más de lo esperado. Agradezco tu paciencia.</p>
+  </>)
   if (isError) return <Navigate to='/auth/login'/>
   if (data) return (
    <>
